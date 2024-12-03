@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-family: "Poppins", sans-serif;
+   
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color:rgb(161, 134, 93);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+/* Nagłówek */
+header {
+    background: rgb(161, 134, 93, 0);
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.headerh1 {
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.headerh2{
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+    .headerh1 {
+        font-size: 20px; /* Ukrywa napisy w nawigacji na mniejszych ekranach */
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.liheader:hover{
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Ukrywa napisy w nawigacji na mniejszych ekranach */
+    }
+}
+
+
+
+/* Sekcja główna */
+
+.hero {
+    background: url('plaza2.webp') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ 
+}
+@media (max-width: 768px) {
+    .hero{
+        width: 100%;
+        padding: 10px; /* Zmniejszenie odstępów na mniejszych ekranach */
+    }
+}
+
+.hero h2 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+    .hero h2{
+        font-size: 30px;
+    }
+    }
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: rgba(216, 216, 201,0.9);
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: rgba(216, 216, 201,0.4);
+    
+}
+
+#apartament, #udogodnienia, #galeria, #kontakt {
+    padding: 3rem 0;
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#apartament ul {
+    list-style-type: none;
+}
+
+#apartament ul li {
+    padding: 10px 0;
+}
+
+.amenities {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.amenity {
+    text-align: center;
+    width: 200px;
+}
+
+.amenity img {
+    width: 50px;
+}
+.p {
+    font-size: 80px;
+}
+
+/* Sekcja galeria https://www.youtube.com/watch?v=YpB1I3wgDgQ 45:05 */
+.container {
+              /* div */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery {  /* ul */
+    background: linear-gradient(
+        60deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.5)
+        );   
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.photo {/* li */
+    cursor: zoom-in;     
+    margin: 10px;
+    max-height: 200px;
+    width: 300px;
+    border: solid 2px rgba(255,255,255,0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 48px 2px rgba(0,0,0,0.3);
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.photo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.photo:hover {
+    transform: scale(1.15);
+}
+
+.popup {
+    position: fixed; /* wczesniej bylo absolute, który dawał zdjęcie jakby na przód wszystkich divów, zmienilem na fixed, aby zdjecie podczas scrollowania bylo w jednej pozycji */
+    background: rgba(0,0,0,0.5);
+    height: 100vh;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 90%;
+}
+.popup.hidden {
+    display: none;
+}
+
+.popup__close {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    cursor: pointer;
+}
+button.popup__close {
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+}
+
+.popup__prev, .popup__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 5px;
+    margin: 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    z-index: 2010;
+}
+
+.popup__prev {
+    left: 15px;
+}
+
+.popup__next {
+    right: 15px;
+}
+
+.popup__prev:hover, .popup__next:hover {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+@media (max-width: 768px) {
+    .popup__prev, .popup__next {
+        top: 80%;
+    }
+}
+
+/* Sekcja kontakt */
+.kontakt1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box {
+    text-align: center;
+    width: 50%;
+    align-self: center;
+    padding-top: 10px;
+}
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 0 48px 2px rgba(0,0,0,0.3);
+}
+@media (max-width: 768px) {
+    .box {
+        width: 90%; /* Ustaw szerokość kontenera blisko pełnej szerokości ekranu */
+        margin: 0 auto; /* Wyśrodkuj kontener */
+        padding: 10px; /* Dodaj trochę odstępów */
+    }
+
+    iframe {
+        width: 100%; /* Mapa zajmuje pełną szerokość kontenera */
+        height: 300px; /* Dopasowana wysokość mapy */
+    }
+}
+/* Stopka */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
